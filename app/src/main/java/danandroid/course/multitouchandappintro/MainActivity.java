@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
         if (shouldShowIntro){
             Intent intent = new Intent(this, PaoloIntroActivity.class);
             startActivity(intent);
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean("shouldShowIntro", false);
-            editor.commit(); //synchronous.
-            this.finish(); //Kill main Activity
+            finish();
         }
     }
 }
